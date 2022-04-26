@@ -27,7 +27,7 @@
     "@ckeditor/ckeditor5-inspector": "^3.1.0",
     "@ckeditor/ckeditor5-link": "^33.0.0",
     "@ckeditor/ckeditor5-list": "^33.0.0",
-    "@ckeditor/ckeditor5-markdown-gfm": "^34.0.0",
+    "@ckeditor/ckeditor5-markdown-gfm": "^33.0.0",
     "@ckeditor/ckeditor5-media-embed": "^33.0.0",
     "@ckeditor/ckeditor5-paragraph": "^33.0.0",
     "@ckeditor/ckeditor5-paste-from-office": "^33.0.0",

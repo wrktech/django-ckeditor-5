@@ -36,7 +36,7 @@ import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
 import TodoList from '@ckeditor/ckeditor5-list/src/todolist';
 import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
 import ListProperties from '@ckeditor/ckeditor5-list/src/listproperties';
-// import Markdown from '@ckeditor/ckeditor5-markdown-gfm/src/markdown';
+import Markdown from '@ckeditor/ckeditor5-markdown-gfm/src/markdown';
 
 export default class ClassicEditor extends ClassicEditorBase {
 }
@@ -73,5 +73,5 @@ ClassicEditor.builtinPlugins = [
     Highlight,
     TodoList,
     ListProperties,
-    // Markdown
+    Markdown
 ];
