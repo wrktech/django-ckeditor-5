@@ -38,9 +38,12 @@ def image_verify(f):
 def handle_uploaded_file(f):
     folder = getattr(settings, "CKEDITOR_5_UPLOADS_FOLDER", "django_ckeditor_5")
     uploads_path = Path(settings.MEDIA_ROOT, folder)
-    fs = storage(location=uploads_path)
-    filename = fs.save(f.name, f)
-    return "/".join([urllib.parse.urljoin(fs.base_url, folder), filename])
+    client = storage.Client()
+    bucket = client.get_bucket("test-nyama")
+    new_blob = bucket.blob('test_file.jpeg')
+    new_blob.upload_from_filename(filename='/local/path.txt') # for test purposes
+    gcs_url = 'https://test-nyama.storage.googleapis.com/test_file.jpeg'
+    return gcs_url
 
 
 def upload_file(request):
