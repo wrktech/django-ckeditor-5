@@ -39,6 +39,7 @@ def image_verify(f):
 def handle_uploaded_file(f):
     folder = getattr(settings, "CKEDITOR_5_UPLOADS_FOLDER", "django_ckeditor_5")
     uploads_path = Path(settings.MEDIA_ROOT, folder, f.name)
+    Path(uploads_path).mkdir(parents=True, exist_ok=True)
     with open(uploads_path, 'wb+') as destination:
         for chunk in f.chunks():
             destination.write(chunk)
