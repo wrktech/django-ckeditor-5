@@ -1,5 +1,6 @@
 import urllib.parse
 from pathlib import Path
+from django.core.files.storage import default_storage
 
 from django import get_version
 from django.http import Http404
@@ -41,7 +42,7 @@ def handle_uploaded_file(f):
     client = storage.Client()
     bucket = client.get_bucket("test-nyama")
     new_blob = bucket.blob('test_file.jpeg')
-    new_blob.upload_from_filename(filename='/local/path.txt') # for test purposes
+    default_storage.save('/test_gile.jpeg', new_blob)
     gcs_url = 'https://test-nyama.storage.googleapis.com/test_file.jpeg'
     return gcs_url
 
