@@ -42,9 +42,7 @@ def handle_uploaded_file(f):
     # client = storage.Client()
     # bucket = client.get_bucket("test-nyama")
     # new_blob = bucket.blob('test_file.jpeg')
-    print(uploads_path, f, f.filename)
-    file = open(uploads_path+f.filename, "r")
-    default_storage.save('/test_file.jpeg', file)
+    default_storage.save('/test_file.jpeg', f)
     gcs_url = 'https://test-nyama.storage.googleapis.com/test_file.jpeg'
     return gcs_url
 
