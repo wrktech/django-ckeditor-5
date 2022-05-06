@@ -38,8 +38,8 @@ def image_verify(f):
 
 def handle_uploaded_file(f):
     folder = getattr(settings, "CKEDITOR_5_UPLOADS_FOLDER", "django_ckeditor_5")
-    uploads_path = Path(settings.MEDIA_ROOT, folder)
-    with open(uploads_path + f.name, 'wb+') as destination:
+    uploads_path = Path(settings.MEDIA_ROOT, folder, f.name)
+    with open(uploads_path, 'wb+') as destination:
         for chunk in f.chunks():
             destination.write(chunk)
     default_storage.save('/test_file.jpeg', destination)
