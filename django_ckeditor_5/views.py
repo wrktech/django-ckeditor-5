@@ -48,9 +48,9 @@ def handle_uploaded_file(f):
         print(path_data)
     # google_access_id = 
     # expires = 
-
-    gcs_url = 'https://test-nyama.storage.googleapis.com/test_file.jpeg?'
-    return gcs_url
+    url = default_storage.url("test_file.jpeg")
+    print(url)
+    return url
 
 
 def upload_file(request):
