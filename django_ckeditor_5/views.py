@@ -44,6 +44,7 @@ def handle_uploaded_file(f):
     with open(uploads_path, 'wb+') as destination:
         for chunk in f.chunks():
             destination.write(chunk)
+        print(destination, folder_path)
         default_storage.save('test_file.jpeg', destination)
     gcs_url = 'https://test-nyama.storage.googleapis.com/test_file.jpeg'
     return gcs_url
