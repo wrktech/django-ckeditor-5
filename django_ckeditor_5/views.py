@@ -1,4 +1,4 @@
-import urllib.parse
+
 from pathlib import Path
 from django.core.files.storage import default_storage
 
@@ -45,11 +45,7 @@ def handle_uploaded_file(f):
         for chunk in f.chunks():
             destination.write(chunk)
         path_data = default_storage.save('test_file.jpeg', destination)
-        print(path_data)
-    # google_access_id = 
-    # expires = 
     url = default_storage.url("test_file.jpeg")
-    print(url)
     return url
 
 
