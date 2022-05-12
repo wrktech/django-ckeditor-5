@@ -1,3 +1,4 @@
+import os
 import string
 import random
 
@@ -51,6 +52,7 @@ def handle_uploaded_file(f):
         for chunk in f.chunks():
             destination.write(chunk)
         path_data = default_storage.save(filename, destination)
+        os.remove(destination)
     url = default_storage.url(filename)
     return url
 
