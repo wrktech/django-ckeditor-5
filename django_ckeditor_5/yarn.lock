@@ -86,6 +86,16 @@
     "@ckeditor/ckeditor5-utils" "^33.0.0"
     "lodash-es" "^4.17.15"
 
+"@ckeditor/ckeditor5-core@^34.0.0":
+  "integrity" "sha512-EDZIqhLhXQ+/gamfAN2XoFNOxh3GWTdZ+8JuDeKUCCZTc+z06WyZOmqNPhiPHKeFd6nmf+keEJP0C0ctBnXoZw=="
+  "resolved" "https://registry.npmjs.org/@ckeditor/ckeditor5-core/-/ckeditor5-core-34.0.0.tgz"
+  "version" "34.0.0"
+  dependencies:
+    "@ckeditor/ckeditor5-engine" "^34.0.0"
+    "@ckeditor/ckeditor5-ui" "^34.0.0"
+    "@ckeditor/ckeditor5-utils" "^34.0.0"
+    "lodash-es" "^4.17.15"
+
 "@ckeditor/ckeditor5-dev-utils@^30.0.0", "@ckeditor/ckeditor5-dev-utils@^30.1.3":
   "integrity" "sha512-e1oRXBxe0PWJcfh4CW0ZPeDNpqGDazMX2s17GrJ5bQHjbbY70KJmHWyKwjf75T2eTihEtRxlX/2D87I4XVJ2iw=="
   "resolved" "https://registry.npmjs.org/@ckeditor/ckeditor5-dev-utils/-/ckeditor5-dev-utils-30.1.3.tgz"
@@ -140,6 +150,14 @@
   "version" "33.0.0"
   dependencies:
     "@ckeditor/ckeditor5-utils" "^33.0.0"
+    "lodash-es" "^4.17.15"
+
+"@ckeditor/ckeditor5-engine@^34.0.0":
+  "integrity" "sha512-7dlPR9+MdoBxTMaakMCoh8SknLw2rsil+eiaEv7T/6SjeOVwIkJsxJqWQNukpEdEGRkz2Epy19SHLmUWu5G9Ig=="
+  "resolved" "https://registry.npmjs.org/@ckeditor/ckeditor5-engine/-/ckeditor5-engine-34.0.0.tgz"
+  "version" "34.0.0"
+  dependencies:
+    "@ckeditor/ckeditor5-utils" "^34.0.0"
     "lodash-es" "^4.17.15"
 
 "@ckeditor/ckeditor5-enter@^33.0.0":
@@ -309,6 +327,15 @@
     "@ckeditor/ckeditor5-utils" "^33.0.0"
     "lodash-es" "^4.17.15"
 
+"@ckeditor/ckeditor5-ui@^34.0.0":
+  "integrity" "sha512-GPFi/WIAP///yHROHBbwaU+zlLtS6O6L1pQJg/mf97pXSk/g7s1+xAfBAyyxvM8e75LqL57fGCh8Z+zwM81adA=="
+  "resolved" "https://registry.npmjs.org/@ckeditor/ckeditor5-ui/-/ckeditor5-ui-34.0.0.tgz"
+  "version" "34.0.0"
+  dependencies:
+    "@ckeditor/ckeditor5-core" "^34.0.0"
+    "@ckeditor/ckeditor5-utils" "^34.0.0"
+    "lodash-es" "^4.17.15"
+
 "@ckeditor/ckeditor5-undo@^33.0.0":
   "integrity" "sha512-GvM5OAHMhnO/RYFNAKykrjAEPaPk7RWachp50Fl5P8IE37fmnf2pLAfSJFhr+Al2FzOGzsx7SNc308DnOOiXDQ=="
   "resolved" "https://registry.npmjs.org/@ckeditor/ckeditor5-undo/-/ckeditor5-undo-33.0.0.tgz"
@@ -331,6 +358,13 @@
   "integrity" "sha512-6XEv4CPUI86Rmk49BxPe+GoUzVUxJAykKOhhKTRcAa6JfKsFuop/j7rqlGCd87X3rxE3/lpzoamQs5D0WKMW6w=="
   "resolved" "https://registry.npmjs.org/@ckeditor/ckeditor5-utils/-/ckeditor5-utils-33.0.0.tgz"
   "version" "33.0.0"
+  dependencies:
+    "lodash-es" "^4.17.15"
+
+"@ckeditor/ckeditor5-utils@^34.0.0":
+  "integrity" "sha512-zeZLv3F6flzuZ+/uHf6S21j6HzTMQyVzc7pTIpJ/mk+4IgQvSvNE92iTPBggtrKqOXqvEN7laCBPI2QpIt+fog=="
+  "resolved" "https://registry.npmjs.org/@ckeditor/ckeditor5-utils/-/ckeditor5-utils-34.0.0.tgz"
+  "version" "34.0.0"
   dependencies:
     "lodash-es" "^4.17.15"
 
@@ -876,6 +910,14 @@
   "integrity" "sha512-p3KULyQg4S7NIHixdwbGX+nFHkoBiA4YQmyWtjb8XngSKV124nJmRysgAeujbUVb15vh+RvFUfCPqU7rXk+hZg=="
   "resolved" "https://registry.npmjs.org/chrome-trace-event/-/chrome-trace-event-1.0.3.tgz"
   "version" "1.0.3"
+
+"ckeditor5-variables@github:wrktech/ckeditor5-variables#custom_plugin":
+  "resolved" "git+ssh://git@github.com/wrktech/ckeditor5-variables.git#f93e36c9c6215303c2421cf6f45eee3d49008a71"
+  "version" "1.0.0"
+  dependencies:
+    "@ckeditor/ckeditor5-core" "^34.0.0"
+    "@ckeditor/ckeditor5-ui" "^34.0.0"
+    "@ckeditor/ckeditor5-utils" "^34.0.0"
 
 "ckeditor5@^33.0.0":
   "integrity" "sha512-KW1NkNFHEch8SsaUE3Gc1NcBETd4qYHuMsTHFkfQWRYKIBqu1kH5csZbERG3RW93K0EzBYZJqyxWMjJzBmK9ZA=="
