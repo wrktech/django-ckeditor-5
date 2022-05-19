@@ -52,7 +52,7 @@ def handle_uploaded_file(f):
         for chunk in f.chunks():
             destination.write(chunk)
         path_data = default_storage.save(filename, destination)
-        os.remove(destination)
+        os.remove(uploads_path)
     url = default_storage.url(filename)
     return url
 
