@@ -877,15 +877,6 @@
   "resolved" "https://registry.npmjs.org/chrome-trace-event/-/chrome-trace-event-1.0.3.tgz"
   "version" "1.0.3"
 
-"ckeditor5-variables@github:wrktech/ckeditor5-variables#540719a8e6d5e599fe0f53ad132a3a0b642b7086":
-  "integrity" "sha512-JIgVW+e+2q9aR5kuUL4qm1eiySi2OOyszQw3QvK/B/sIQQ5ikJ+kVTxgeWlnt3aqT8e/HDX/z2mmieCKjxMOZQ=="
-  "resolved" "git+ssh://git@github.com/wrktech/ckeditor5-variables.git#540719a8e6d5e599fe0f53ad132a3a0b642b7086"
-  "version" "1.0.0"
-  dependencies:
-    "@ckeditor/ckeditor5-core" "^33.0.0"
-    "@ckeditor/ckeditor5-ui" "^33.0.0"
-    "@ckeditor/ckeditor5-utils" "^33.0.0"
-
 "ckeditor5@^33.0.0":
   "integrity" "sha512-KW1NkNFHEch8SsaUE3Gc1NcBETd4qYHuMsTHFkfQWRYKIBqu1kH5csZbERG3RW93K0EzBYZJqyxWMjJzBmK9ZA=="
   "resolved" "https://registry.npmjs.org/ckeditor5/-/ckeditor5-33.0.0.tgz"

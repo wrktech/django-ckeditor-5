@@ -36,8 +36,7 @@
     "@ckeditor/ckeditor5-table": "^33.0.0",
     "@ckeditor/ckeditor5-theme-lark": "^33.0.0",
     "@ckeditor/ckeditor5-ui": "^33.0.0",
-    "@ckeditor/ckeditor5-upload": "^33.0.0",
-    "ckeditor5-variables": "github:wrktech/ckeditor5-variables#540719a8e6d5e599fe0f53ad132a3a0b642b7086"
+    "@ckeditor/ckeditor5-upload": "^33.0.0"
   },
   "devDependencies": {
     "@ckeditor/ckeditor5-core": "^33.0.0",
