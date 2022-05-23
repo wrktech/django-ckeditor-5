@@ -38,7 +38,6 @@ import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
 import ListProperties from '@ckeditor/ckeditor5-list/src/listproperties';
 import SourceEditing from '@ckeditor/ckeditor5-source-editing/src/sourceediting';
 import Markdown from '@ckeditor/ckeditor5-markdown-gfm/src/markdown';
-import InsertDropDown  from './dropdown';
 export default class ClassicEditor extends ClassicEditorBase {
 }
 
@@ -75,6 +74,5 @@ ClassicEditor.builtinPlugins = [
     TodoList,
     ListProperties,
     Markdown,
-    SourceEditing,
-    InsertDropDown,
+    SourceEditing
 ];
