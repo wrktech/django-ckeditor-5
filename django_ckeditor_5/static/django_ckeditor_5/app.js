@@ -1,5 +1,4 @@
 import ClassicEditor from './src/ckeditor';
-import InsertDropDown from './src/dropdown';
 import './src/override-django.css';
 
 let editors = [];
@@ -36,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         console.log("config: ", config);
         ClassicEditor.create(allEditors[i],
-            {...config, extraPlugins: [InsertDropDown]}).then(editor => {
+            {...config}).then(editor => {
             editors.push(editor);
         }).catch(error => {
 
