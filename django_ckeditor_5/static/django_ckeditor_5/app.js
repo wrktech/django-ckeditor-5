@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         console.log("config: ", config);
         ClassicEditor.create(allEditors[i],
-            {...config}).then(editor => {
+            config).then(editor => {
             editors.push(editor);
         }).catch(error => {
 
