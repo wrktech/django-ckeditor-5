@@ -173,5 +173,6 @@ Includes the following ckeditor5 plugins:
             Indent, IndentBlock,
             Highlight,
             TodoList,
-            ListProperties
+            ListProperties,
+            Markdown
 
