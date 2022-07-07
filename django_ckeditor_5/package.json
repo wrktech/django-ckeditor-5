@@ -27,17 +27,14 @@
     "@ckeditor/ckeditor5-inspector": "^3.1.0",
     "@ckeditor/ckeditor5-link": "^33.0.0",
     "@ckeditor/ckeditor5-list": "^33.0.0",
-    "@ckeditor/ckeditor5-markdown-gfm": "^33.0.0",
     "@ckeditor/ckeditor5-media-embed": "^33.0.0",
     "@ckeditor/ckeditor5-paragraph": "^33.0.0",
     "@ckeditor/ckeditor5-paste-from-office": "^33.0.0",
     "@ckeditor/ckeditor5-remove-format": "^33.0.0",
-    "@ckeditor/ckeditor5-source-editing": "^33.0.0",
     "@ckeditor/ckeditor5-table": "^33.0.0",
     "@ckeditor/ckeditor5-theme-lark": "^33.0.0",
     "@ckeditor/ckeditor5-ui": "^33.0.0",
-    "@ckeditor/ckeditor5-upload": "^33.0.0",
-    "ckeditor5-variables": "github:wrktech/ckeditor5-variables#8ad260b598575a71024480d51462f54a6a5670b9"
+    "@ckeditor/ckeditor5-upload": "^33.0.0"
   },
   "devDependencies": {
     "@ckeditor/ckeditor5-core": "^33.0.0",

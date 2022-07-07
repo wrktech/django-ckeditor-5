@@ -1,9 +1,5 @@
-import os
-import string
-import random
-
+import urllib.parse
 from pathlib import Path
-from django.core.files.storage import default_storage
 
 from django import get_version
 from django.http import Http404
@@ -18,8 +14,6 @@ from django.conf import settings
 from .forms import UploadFileForm
 from PIL import Image
 
-def get_random_string(length):
-    return ''.join(random.choice(string.ascii_letters) for m in range(length))
 
 class NoImageException(Exception):
     pass
@@ -43,18 +37,10 @@ def image_verify(f):
 
 def handle_uploaded_file(f):
     folder = getattr(settings, "CKEDITOR_5_UPLOADS_FOLDER", "django_ckeditor_5")
-    file_extension = f.name.split('.')[-1]
-    filename = f"{get_random_string(25)}.{file_extension}"
-    uploads_path = Path(settings.MEDIA_ROOT, folder, filename)
-    folder_path = Path(settings.MEDIA_ROOT, folder)
-    Path(folder_path).mkdir(parents=True, exist_ok=True)
-    with open(uploads_path, 'wb+') as destination:
-        for chunk in f.chunks():
-            destination.write(chunk)
-        path_data = default_storage.save(filename, destination)
-        os.remove(uploads_path)
-    url = default_storage.url(filename)
-    return url
+    uploads_path = Path(settings.MEDIA_ROOT, folder)
+    fs = storage(location=uploads_path)
+    filename = fs.save(f.name, f)
+    return "/".join([urllib.parse.urljoin(fs.base_url, folder), filename])
 
 
 def upload_file(request):
