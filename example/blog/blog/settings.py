@@ -100,13 +100,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "en"
 
 TIME_ZONE = "UTC"
 
 USE_I18N = True
-
-USE_L10N = True
 
 USE_TZ = True
 
@@ -116,6 +114,10 @@ USE_TZ = True
 STATIC_URL = "/static/"
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static_files"),
+]
 
 customColorPalette = [
     {"color": "hsl(4, 90%, 58%)", "label": "Red"},
@@ -137,10 +139,26 @@ CKEDITOR_5_CONFIGS = {
             "bulletedList",
             "numberedList",
             "blockQuote",
-            "imageUpload",
+        ],
+    },
+    "comment": {
+        "language": {
+            "ui": "en",
+            "content": "ar"
+        },
+        "toolbar": [
+            "heading",
+            "|",
+            "bold",
+            "italic",
+            "link",
+            "bulletedList",
+            "numberedList",
+            "blockQuote",
         ],
     },
     "extends": {
+        "language": "ru",
         "blockToolbar": [
             "paragraph",
             "heading1",
@@ -184,6 +202,7 @@ CKEDITOR_5_CONFIGS = {
             "mediaEmbed",
             "removeFormat",
             "insertTable",
+            "sourceEditing",
         ],
         "image": {
             "toolbar": [
@@ -249,11 +268,23 @@ CKEDITOR_5_CONFIGS = {
         },
         "list": {
             "properties": {
-                "styles": "true",
-                "startIndex": "true",
-                "reversed": "true",
+                "styles": True,
+                "startIndex": True,
+                "reversed": True,
             }
+        },
+        "htmlSupport": {
+            "allow": [
+                {
+                    "name": "/.*/",
+                    "attributes": True,
+                    "classes": True,
+                    "styles": True
+                }
+            ]
         }
 
     },
 }
+CKEDITOR_5_FILE_STORAGE = "articles.storage.CustomStorage"
+CKEDITOR_5_CUSTOM_CSS = "custom.css"
