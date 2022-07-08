@@ -43,7 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         ClassicEditor.create(allEditors[i],
             config).then(editor => {
-            editors.push(editor);
+                editor.data.processor.keepHtml('figure');
+                editors.push(editor);
         }).catch(error => {
 
         });
