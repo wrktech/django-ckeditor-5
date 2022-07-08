@@ -65,6 +65,7 @@ Quick start
         ]
 
       CKEDITOR_5_CUSTOM_CSS = 'path_to.css' # optional
+      CKEDITOR_5_FILE_STORAGE = "path_to_storage.CustomStorage" # optional
       CKEDITOR_5_CONFIGS = { 
         'default': {
             'toolbar': ['heading', '|', 'bold', 'italic', 'link',
@@ -80,7 +81,7 @@ Quick start
                 'blockQuote', 'imageUpload'
             ],
             'toolbar': ['heading', '|', 'outdent', 'indent', '|', 'bold', 'italic', 'link', 'underline', 'strikethrough',
-            'code','subscript', 'superscript', 'highlight', '|', 'codeBlock',
+            'code','subscript', 'superscript', 'highlight', '|', 'codeBlock', 'sourceEditing',
                         'bulletedList', 'numberedList', 'todoList', '|',  'blockQuote', 'imageUpload', '|',
                         'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', 'mediaEmbed', 'removeFormat',
                         'insertTable',],
@@ -173,5 +174,50 @@ Includes the following ckeditor5 plugins:
             Indent, IndentBlock,
             Highlight,
             TodoList,
-            ListProperties
+            ListProperties,
+            SourceEditing,
+            GeneralHtmlSupport
 
+Example of using a widget in a form:
+
+  .. code-block:: python
+
+      from django import forms
+
+      from django_ckeditor_5.widgets import CKEditor5Widget
+      from .models import Comment
+
+
+      class CommentForm(forms.ModelForm):
+            """Form for comments to the article."""
+
+            def __init__(self, *args, **kwargs):
+                super().__init__(*args, **kwargs)
+                self.fields["text"].required = False
+
+            class Meta:
+                model = Comment
+                fields = ("author", "text")
+                widgets = {
+                    "text": CKEditor5Widget(
+                        attrs={"class": "django_ckeditor_5"}, config_name="comment"
+                    )
+                }
+
+
+Custom storage example:
+
+  .. code-block:: python
+
+      import os
+      from urllib.parse import urljoin
+
+      from django.conf import settings
+      from django.core.files.storage import FileSystemStorage
+
+
+      class CustomStorage(FileSystemStorage):
+          """Custom storage for django_ckeditor_5 images."""
+
+          location = os.path.join(settings.MEDIA_ROOT, "django_ckeditor_5")
+          base_url = urljoin(settings.MEDIA_URL, "django_ckeditor_5/")
