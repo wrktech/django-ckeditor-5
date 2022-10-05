@@ -682,7 +682,7 @@
   "resolved" "https://registry.npmjs.org/acorn-walk/-/acorn-walk-7.2.0.tgz"
   "version" "7.2.0"
 
-"acorn@^6.2.1", "acorn@^8":
+"acorn@^6.2.1":
   "integrity" "sha512-XtGIhXwF8YM8bJhGxG5kXgjkEuNGLTkoYqVE+KMR+aspr4KGYmKYg7yUe3KghyQ9yheNwLnjmzh/7+gfDBmHCQ=="
   "resolved" "https://registry.npmjs.org/acorn/-/acorn-6.4.2.tgz"
   "version" "6.4.2"
@@ -692,20 +692,10 @@
   "resolved" "https://registry.npmjs.org/acorn/-/acorn-7.4.1.tgz"
   "version" "7.4.1"
 
-"acorn@^8.2.4":
-  "integrity" "sha512-Xx54uLJQZ19lKygFXOWsscKUbsBZW0CPykPhVQdhIeIwrbPmJzqeASDInc8nKBnp/JT6igTs82qPXz069H8I/A=="
-  "resolved" "https://registry.npmjs.org/acorn/-/acorn-8.7.1.tgz"
-  "version" "8.7.1"
-
-"acorn@^8.4.1":
-  "integrity" "sha512-Xx54uLJQZ19lKygFXOWsscKUbsBZW0CPykPhVQdhIeIwrbPmJzqeASDInc8nKBnp/JT6igTs82qPXz069H8I/A=="
-  "resolved" "https://registry.npmjs.org/acorn/-/acorn-8.7.1.tgz"
-  "version" "8.7.1"
-
-"acorn@^8.5.0":
-  "integrity" "sha512-Xx54uLJQZ19lKygFXOWsscKUbsBZW0CPykPhVQdhIeIwrbPmJzqeASDInc8nKBnp/JT6igTs82qPXz069H8I/A=="
-  "resolved" "https://registry.npmjs.org/acorn/-/acorn-8.7.1.tgz"
-  "version" "8.7.1"
+"acorn@^8", "acorn@^8.2.4", "acorn@^8.4.1", "acorn@^8.5.0":
+  "integrity" "sha512-QOxyigPVrpZ2GXT+PFyZTl6TtOFc5egxHIP9IlQ+RbupQuX4RkT/Bee4/kQuC02Xkzg84JcT7oLYtDIQxp+v7w=="
+  "resolved" "https://registry.npmjs.org/acorn/-/acorn-8.8.0.tgz"
+  "version" "8.8.0"
 
 "agent-base@6":
   "integrity" "sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ=="
@@ -930,9 +920,9 @@
   "resolved" "https://registry.npmjs.org/chrome-trace-event/-/chrome-trace-event-1.0.3.tgz"
   "version" "1.0.3"
 
-"ckeditor5-variables@github:wrktech/ckeditor5-variables#2127545ebefc26225464134f67911bcab81aee68":
-  "integrity" "sha512-XhpftrP8qsAXYCEZP5bCS/F4H8vEfNgmShdJknk53WslVffxUwgA2Ro2dYOtDiJaNBo/bCb05Bz/ZOMGo6WY5w=="
-  "resolved" "git+ssh://git@github.com/wrktech/ckeditor5-variables.git#2127545ebefc26225464134f67911bcab81aee68"
+"ckeditor5-variables@github:wrktech/ckeditor5-variables#f88c35bb454b12b58806a4e87cf2465efae9ceeb":
+  "integrity" "sha512-liu9UMI8STBZIQ8sKM0IwNK/MYZs5jwEE5wM8RZtfGUyMUW8bnN0vD+41DJ5Z1s+p/o+naXJV5xrvvkhAOFiOA=="
+  "resolved" "git+ssh://git@github.com/wrktech/ckeditor5-variables.git#f88c35bb454b12b58806a4e87cf2465efae9ceeb"
   "version" "1.0.0"
   dependencies:
     "@ckeditor/ckeditor5-core" "^34.1.0"
