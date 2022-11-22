@@ -179,6 +179,13 @@
   dependencies:
     "ckeditor5" "^34.1.0"
 
+"@ckeditor/ckeditor5-horizontal-line@^34.1.0":
+  "integrity" "sha512-BblqWFHOGB4fcKsHm6uH8gkvKA3+76hEBauovqOQLzgAvfC4zNpvcOVrt24hoF7b818Iisgea88eslljL4yX7A=="
+  "resolved" "https://registry.npmjs.org/@ckeditor/ckeditor5-horizontal-line/-/ckeditor5-horizontal-line-34.2.0.tgz"
+  "version" "34.2.0"
+  dependencies:
+    "ckeditor5" "^34.2.0"
+
 "@ckeditor/ckeditor5-html-support@^34.1.0":
   "integrity" "sha512-8X+KYkhgfRAiyqgrFzCpt4AuLLOTaVf8XbD26OiOqa6RNNcyGmh9+WkFcCbwgxCpAwpAgDB8vU5xqj6asZFqBw=="
   "resolved" "https://registry.npmjs.org/@ckeditor/ckeditor5-html-support/-/ckeditor5-html-support-34.1.0.tgz"
