@@ -39,6 +39,7 @@ import ListProperties from '@ckeditor/ckeditor5-list/src/listproperties';
 import SourceEditing from '@ckeditor/ckeditor5-source-editing/src/sourceediting';
 import GeneralHtmlSupport from '@ckeditor/ckeditor5-html-support/src/generalhtmlsupport';
 import Markdown from '@ckeditor/ckeditor5-markdown-gfm/src/markdown';
+import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline';
 import InsertDropDown from 'ckeditor5-variables';
 
 
@@ -80,5 +81,6 @@ ClassicEditor.builtinPlugins = [
     SourceEditing,
     GeneralHtmlSupport,
     Markdown,
+    HorizontalLine,
     InsertDropDown
 ];
