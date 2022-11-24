@@ -20,6 +20,8 @@ function getCookie(name) {
 
 document.addEventListener("DOMContentLoaded", () => {
     const allEditors = document.querySelectorAll('.django_ckeditor_5');
+
+
     for (let i = 0; i < allEditors.length; ++i) {
         const script_id = `${allEditors[i].id}_script`
         const upload_url = document.getElementById(
@@ -40,15 +42,28 @@ document.addEventListener("DOMContentLoaded", () => {
             'uploadUrl': upload_url, 'headers': {
                 'X-CSRFToken': getCookie('csrftoken'),
             }
-        }
+        };
         ClassicEditor.create(allEditors[i],
             config).then(editor => {
+                const viewDocument = view.document;
+                viewDocument.on( 'keydown', (evt, data) => {
+                    if( (data.keyCode == keyCodes.tab) && viewDocument.isFocused ){
+                        // with white space setting to pre
+                        editor.execute( 'input', { text: "\t" } );
+                        // editor.execute( 'input', { text: "     " } );
+
+                        evt.stop(); // Prevent executing the default handler.
+                        data.preventDefault();
+                        view.scrollToTheSelection();
+                    }
+                } );
                 editor.data.processor.keepHtml('figure');
                 editors.push(editor);
         }).catch(error => {
 
         });
     }
+
     window.editors = editors;
     window.ClassicEditor = ClassicEditor;
 });

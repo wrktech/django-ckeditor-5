@@ -31,7 +31,7 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TableProperties from '@ckeditor/ckeditor5-table/src/tableproperties';
 import TableCellProperties from '@ckeditor/ckeditor5-table/src/tablecellproperties';
 import Indent from '@ckeditor/ckeditor5-indent/src/indent';
-import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
+// import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
 import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
 import TodoList from '@ckeditor/ckeditor5-list/src/todolist';
 import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
@@ -74,7 +74,8 @@ ClassicEditor.builtinPlugins = [
     RemoveFormat,
     Table, TableToolbar,
     TableProperties, TableCellProperties,
-    Indent, IndentBlock,
+    Indent,
+    // IndentBlock, Remove as it's not compatible with Markdown
     Highlight,
     TodoList,
     ListProperties,
