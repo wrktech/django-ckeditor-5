@@ -48,7 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
             config).then(editor => {
                 const viewDocument = editor.editing.view.document;
                 viewDocument.on( 'keydown', (evt, data) => {
-                    if( (data.keyCode == keyCodes.tab) && viewDocument.isFocused ){
+                    const TABKEY = 9;
+                    if( (data.keyCode == TABKEY) && viewDocument.isFocused ){
                         // with white space setting to pre
                         editor.execute( 'input', { text: "\t" } );
                         // editor.execute( 'input', { text: "     " } );
