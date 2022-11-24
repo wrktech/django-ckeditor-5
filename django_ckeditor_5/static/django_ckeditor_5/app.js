@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         config.tabSpaces = 4;
         ClassicEditor.create(allEditors[i],
             config).then(editor => {
-                const viewDocument = view.document;
+                const viewDocument = editor.editing.view.document;
                 viewDocument.on( 'keydown', (evt, data) => {
                     if( (data.keyCode == keyCodes.tab) && viewDocument.isFocused ){
                         // with white space setting to pre
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         evt.stop(); // Prevent executing the default handler.
                         data.preventDefault();
-                        view.scrollToTheSelection();
+                        editor.editing.view.scrollToTheSelection();
                     }
                 } );
                 editor.data.processor.keepHtml('figure');
