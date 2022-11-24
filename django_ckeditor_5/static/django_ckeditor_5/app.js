@@ -43,7 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 'X-CSRFToken': getCookie('csrftoken'),
             }
         };
-        config.tabSpaces = 4;
         ClassicEditor.create(allEditors[i],
             config).then(editor => {
                 const viewDocument = editor.editing.view.document;
@@ -51,9 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     const TABKEY = 9;
                     if( (data.keyCode == TABKEY) && viewDocument.isFocused ){
                         // with white space setting to pre
-                        editor.execute( 'input', { text: "\t" } );
-                        // editor.execute( 'input', { text: "     " } );
-
+                        editor.execute( 'input', { text: "    " } );
                         evt.stop(); // Prevent executing the default handler.
                         data.preventDefault();
                         editor.editing.view.scrollToTheSelection();
