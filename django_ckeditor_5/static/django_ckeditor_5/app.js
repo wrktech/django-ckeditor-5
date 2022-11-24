@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 'X-CSRFToken': getCookie('csrftoken'),
             }
         };
+        config.tabSpaces = 4;
         ClassicEditor.create(allEditors[i],
             config).then(editor => {
                 const viewDocument = view.document;
